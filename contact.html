@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Contact - fasttrackcommunications</title>
+  <title>Contact - speedyinternet</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -38,8 +38,6 @@
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
         <img src="assets/img/speeyinternet-logo.png" alt="" width="160" style="max-height: 50px;">
       </a>
 
@@ -122,19 +120,36 @@
               <div class="row gy-4">
 
                 <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required>
                 </div>
 
-                <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                <div class="col-md-6">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" required>
                 </div>
 
                 <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                  <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+                </div>
+
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
+                </div>
+
+                <!-- Disclaimer + Checkbox -->
+                <div class="col-md-12">
+                  <div class="form-check small text-muted">
+                    <input class="form-check-input" type="checkbox" id="consentCheckbox">
+                    <label class="form-check-label" for="consentCheckbox">
+                      By clicking the button or entering your information, you consent for
+                      <strong>speedyinternet</strong>, and any of its affiliate service providers
+                      to use automated technology, including but not limited to texts, phone calls,
+                      prerecorded messages, email or digital technology to contact you at the number
+                      and email provided about <strong>speedyinternet</strong> offers which may or may
+                      not be directly related to this specific marketing campaign using other affiliate
+                      companies. This consent is not required to make a purchase. <br>
+                      <b>By clicking the checkbox constitutes your electronic signature.</b>
+                    </label>
+                  </div>
                 </div>
 
                 <div class="col-md-12 text-center">
@@ -142,11 +157,14 @@
                   <div class="error-message"></div>
                   <div class="sent-message">Your message has been sent. Thank you!</div>
 
-                  <button type="submit">Send Message</button>
+                  <button type="submit" id="submitBtn" disabled class="btn btn-primary">
+                    Send Message
+                  </button>
                 </div>
 
               </div>
             </form>
+
           </div><!-- End Contact Form -->
 
         </div>
@@ -205,25 +223,24 @@
           <p>Colorado</p>
           <p>United States</p>
           <p class="mt-4"><strong>Phone:</strong> <span><a href="tel: +17204966912">+17204966912</a></span></p>
-          <p><strong>Email:</strong> <span><a
-                href="mailto: info@speedyinternet.net">info@speedyinternet.net</a></span></p>
+          <p><strong>Email:</strong> <span><a href="mailto: info@speedyinternet.net">info@speedyinternet.net</a></span>
+          </p>
         </div>
 
       </div>
     </div>
 
     <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">speedyinternet</strong> <span>All Rights Reserved</span></p>
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">speedyinternet</strong> <span>All Rights Reserved</span>
+      </p>
     </div>
     <div class="disclaimer" id="disclaimerDiv">
       <div class="disclaimer-text">
         <strong>Disclaimer:</strong>
-        <p>By clicking the button or entering your information, you consent for Fast Track
-          Communication,
+        <p>By clicking the button or entering your information, you consent for <b>speedyinternet</b>,
           and any of its affiliate service providers to use automated technology. Including but not limited to: texts,
           phone calls, prerecorded
-          messages, email or digital technology to contact you at the number and email provided about Fast Track
-          Communication offers which
+          messages, email or digital technology to contact you at the number and email provided about <b>speedyinternet</b> offers which
           may or may not be directly related to this specific marketing campaign using other affiliate companies.
           This consent is not required to make a purchase.
           Clicking the button below constitutes your electronic signature.</p>

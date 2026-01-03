@@ -313,6 +313,10 @@
       white-space: nowrap;
     }
 
+    .php-email-form .form-check .form-check-label {
+      color: #000;
+    }
+
     /* Mobile optimization */
     @media (max-width: 576px) {
       .disclaimer-fab-text {
@@ -624,12 +628,30 @@
                 <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
               </div>
 
+              <div class="col-md-12">
+                <div class="form-check small text-muted">
+                  <input class="form-check-input" type="checkbox" id="consentCheckbox">
+                  <label class="form-check-label" for="consentCheckbox">
+                    By clicking the button or entering your information, you consent for
+                    <strong>speedyinternet</strong>, and any of its affiliate service providers
+                    to use automated technology, including but not limited to texts, phone calls,
+                    prerecorded messages, email or digital technology to contact you at the number
+                    and email provided about <strong>speedyinternet</strong> offers which may or may
+                    not be directly related to this specific marketing campaign using other affiliate
+                    companies. This consent is not required to make a purchase. <br>
+                    <b>By clicking the checkbox constitutes your electronic signature.</b>
+                  </label>
+                </div>
+              </div>
+
               <div class="col-md-12 text-center">
                 <div class="loading">Loading</div>
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
 
-                <button type="submit">Send Message</button>
+                <button type="submit" id="submitBtn" disabled class="btn btn-primary">
+                  Send Message
+                </button>
               </div>
 
             </div>
@@ -703,12 +725,10 @@
     <!-- <div class="disclaimer" id="disclaimerDiv">
       <div class="disclaimer-text">
         <strong>Disclaimer:</strong>
-        <p>By clicking the button or entering your information, you consent for Fast Track
-          Communications,
+        <p>By clicking the button or entering your information, you consent for <b>speedyinternet</b>s,
           and any of its affiliate service providers to use automated technology. Including but not limited to: texts,
           phone calls, prerecorded
-          messages, email or digital technology to contact you at the number and email provided about Fast Track
-          Communications offers which
+          messages, email or digital technology to contact you at the number and email provided about <b>speedyinternet</b>s offers which
           may or may not be directly related to this specific marketing campaign using other affiliate companies.
           This consent is not required to make a purchase.
           Clicking the button below constitutes your electronic signature.</p>

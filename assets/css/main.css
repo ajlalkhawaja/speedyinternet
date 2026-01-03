@@ -1930,7 +1930,7 @@ section,
 .contact .php-email-form input[type=text]::placeholder,
 .contact .php-email-form input[type=email]::placeholder,
 .contact .php-email-form textarea::placeholder {
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
+  color: #ffffff91;
 }
 
 .contact .php-email-form button[type=submit] {
@@ -2086,4 +2086,10 @@ section,
   text-decoration: underline;
   color: #000;
   transform: scale(1.2);
+}
+
+.php-email-form .form-check .form-check-label {
+  color: #fff;
+  font-size: 13px;
+  text-align: justify;
 }

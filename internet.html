@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Speedy Internet</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="/assets/img/favicon.png" rel="icon">
+  <link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="/assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="/assets/css/main.css" rel="stylesheet">
+  <style>
+    /* Global */
+    body {
+      font-family: "Roboto", sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: #ffffff;
+      color: #111827;
+    }
+
+    section {
+      padding: 80px 0;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      background: url('/assets/img/testimonials-bg.jpg') center center/cover no-repeat;
+      text-align: center;
+      padding: 160px 20px;
+      color: #002864;
+    }
+
+    .hero-section h2 {
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #0a0a23;
+    }
+
+    .hero-section p {
+      font-size: 18px;
+      margin-bottom: 30px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      color: #000;
+    }
+
+    .hero-section a {
+      background: #111827;
+      padding: 14px 34px;
+      border-radius: 50px;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .hero-section a:hover {
+      background: #002864;
+    }
+
+    /* Benefits */
+    .benefits {
+      background: #2b2b2c;
+    }
+
+    .benefits h2 {
+      text-align: center;
+      font-size: 40px;
+      font-weight: 700;
+      margin-bottom: 50px;
+    }
+
+    .benefits-grid {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+    }
+
+    .benefit {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+      transition: 0.3s;
+    }
+
+    .benefit:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    }
+
+    /* Features */
+    .features {
+      background: #000;
+      color: #fff;
+    }
+
+    .features h2 {
+      text-align: center;
+      font-size: 40px;
+      font-weight: 700;
+      margin-bottom: 50px;
+      color: #fff;
+    }
+
+    .features-grid {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+    }
+
+    .feature {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      color: #111827;
+      text-align: center;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+      transition: 0.3s;
+    }
+
+    .feature:hover {
+      transform: translateY(-6px);
+    }
+
+    /* Availability */
+    .availability {
+      background: #2b2b2c;
+      text-align: center;
+    }
+
+    .availability h2 {
+      font-size: 40px;
+      font-weight: 700;
+    }
+
+    .availability input[type="text"] {
+      padding: 14px;
+      width: 300px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin-top: 15px;
+    }
+
+    .availability button {
+      padding: 14px 28px;
+      background: #ff6600;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      margin-left: 5px;
+      transition: 0.3s;
+    }
+
+    .availability button:hover {
+      background: #002864;
+    }
+
+    /* Testimonials Section */
+    .testimonials-section {
+      background: #fff;
+      color: #fff;
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+
+    .testimonials-section h2 {
+      text-align: center;
+      font-size: 40px;
+      font-weight: 700;
+      margin-bottom: 40px;
+      color: #ff6600;
+    }
+
+    .testimonial-grid {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+    }
+
+    .testimonial {
+      background: #ffffff;
+      color: #111827;
+      padding: 30px;
+      border-radius: 14px;
+      font-style: italic;
+      position: relative;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+      transition: 0.3s;
+    }
+
+    .testimonial:hover {
+      transform: translateY(-6px);
+    }
+
+    .testimonial strong {
+      display: block;
+      margin-top: 10px;
+      color: #ff6600;
+      font-weight: 700;
+    }
+
+    /* CTA */
+    .cta {
+      background: #fff;
+      text-align: center;
+      padding: 80px 20px;
+      color: #000;
+    }
+
+    .cta h2 {
+      color: #000;
+      font-size: 42px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .cta a {
+      background: #000;
+      padding: 14px 34px;
+      border-radius: 50px;
+      font-size: 18px;
+      font-weight: 600;
+      color: #fff;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .cta a:hover {
+      background: #002864;
+    }
+
+    /* Footer */
+    footer {
+      background: #111827;
+      color: #aaa;
+      text-align: center;
+      padding: 25px;
+      margin-top: 40px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero-section h2 {
+        font-size: 34px;
+      }
+
+      .hero-section p {
+        font-size: 16px;
+      }
+
+      section {
+        padding: 60px 20px;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <header id="header" class="header d-flex align-items-center fixed-top" style="background-color: #111827;">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <img src="assets/img/speeyinternet-logo.png" alt="" width="160" style="max-height: 50px;">
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home<br></a></li>
+          <li><a href="#" class="active">Internet</a></li>
+          <li><a href="frontier.html">Frontier</a></li>
+          <li><a href="optimum.html">Optimum</a></li>
+          <li><a href="kinetic.html">Kinetic</a></li>
+          <li><a href="contact.html" target="_blank">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="tel: +17204966912">Give a Call</a>
+    </div>
+  </header>
+
+  <main class="internet-wrapper">
+    <section class="hero-section">
+      <h2>High-Speed Internet You Can Count On</h2>
+      <p>Experience unmatched reliability, fast downloads, smooth streaming, and secure connectivity—built for homes and
+        businesses.</p>
+      <a href="contact.html" target="_blank">Get Connected</a>
+    </section>
+  
+    <section class="benefits">
+      <h2>Why Choose Speedy Internet?</h2>
+      <div class="benefits-grid">
+        <div class="benefit">
+          <h3>Ultra-Reliable Network</h3>
+          <p>Enjoy stable, consistent internet powered by advanced technology and a 99.9% uptime record.</p>
+        </div>
+        <div class="benefit">
+          <h3>Transparent & Affordable Plans</h3>
+          <p>Choose from flexible, cost-effective packages with no hidden charges—ever.</p>
+        </div>
+        <div class="benefit">
+          <h3>24/7 Expert Support</h3>
+          <p>Our dedicated support team is always available to assist you whenever you need us.</p>
+        </div>
+      </div>
+    </section>
+  
+    <section class="features">
+      <h2>Powerful Internet Features</h2>
+      <div class="features-grid">
+        <div class="feature">
+          <h3>High-Speed Streaming</h3>
+          <p>Watch your favorite shows, game online, and attend HD video calls without interruption.</p>
+        </div>
+        <div class="feature">
+          <h3>Whole-Home WiFi Coverage</h3>
+          <p>Enjoy strong WiFi in every corner of your home with our enhanced coverage solutions.</p>
+        </div>
+        <div class="feature">
+          <h3>Unlimited Data</h3>
+          <p>Browse, stream, game, and download freely with truly unlimited usage.</p>
+        </div>
+      </div>
+    </section>
+  
+    <!-- <section class="availability">
+      <h2>Check Service Availability</h2>
+      <p>Enter your ZIP code to find out if Speedy Internet is accessible in your area.</p>
+      <form>
+        <input type="text" placeholder="Enter ZIP Code" required>
+        <button type="submit">Check Availability</button>
+      </form>
+    </section> -->
+  
+    <section class="testimonials-section">
+      <h2>What Customers Are Saying</h2>
+      <div class="testimonial-grid">
+        <div class="testimonial">
+          <p>“The difference after switching to Speedy Internet is incredible. Streaming and gaming are completely
+            seamless.”</p>
+          <strong>- Amanda L.</strong>
+        </div>
+        <div class="testimonial">
+          <p>“I work remotely, and I’ve never had a connection this stable. Customer support is also outstanding.”</p>
+          <strong>- Carlos M.</strong>
+        </div>
+        <div class="testimonial">
+          <p>“Fast setup, transparent pricing, and amazing speed. Highly recommended for families and small businesses.”
+          </p>
+          <strong>- Rebecca T.</strong>
+        </div>
+      </div>
+    </section>
+  
+    <section class="cta" id="contact">
+      <h2>Ready To Connected:</h2>
+      <p>Call us today, or fill out this form so we can reach out instead! </p>
+      <a href="contact.html">Contact Us</a>
+    </section>
+  </main>
+
+
+  <footer>
+    <p>&copy; 2025 Speedy Internet. All Rights Reserved.</p>
+  </footer>
+
+</body>
+
+</html>

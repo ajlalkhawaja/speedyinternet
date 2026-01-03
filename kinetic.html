@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Kinetic - speedyinternet</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- Favicons -->
+    <link href="/assets/img/favicon.png" rel="icon">
+    <link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="/assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link href="/assets/css/main.css" rel="stylesheet">
+    <style>
+        /* ===== Page Colors ===== */
+        :root {
+            --primary-color: #2DBA73;
+            /* green */
+            --secondary-color: #00B4E6;
+            /* blue */
+            --highlight-color: #FFF600;
+            /* yellow */
+            --text-color: #111827;
+            --bg-light: #f9f9fb;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-color);
+            background-color: var(--bg-light);
+            scroll-behavior: smooth;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+        }
+
+        /* ===== Hero Section ===== */
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: #fff;
+            text-align: center;
+            padding: 11rem 1rem 3rem;
+        }
+
+        .hero-section h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+
+        }
+
+        .hero-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero-section .btn-primary {
+            background-color: var(--highlight-color);
+            color: var(--text-color);
+            font-weight: 600;
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
+            font-size: 1rem;
+        }
+
+        .hero-features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .hero-feature {
+            background: #fff;
+            color: var(--text-color);
+            padding: 1rem 1.5rem;
+            border-radius: 1rem;
+            flex: 1 1 200px;
+            max-width: 250px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .hero-feature:hover {
+            transform: translateY(-5px);
+        }
+
+        .hero-feature i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        /* ===== Plans Section ===== */
+        .plans-section {
+            padding: 4rem 1rem 3rem;
+            text-align: center;
+            background-color: var(--highlight-color);
+        }
+
+        .plans-section h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+        }
+
+        .plan-card {
+            background: #fff;
+            border-radius: 1rem;
+            padding: 2rem 1.5rem;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .plan-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .plan-price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .plan-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .plan-features li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* ===== Bonus Section ===== */
+        .bonus-section {
+            background-color: var(--secondary-color);
+            color: #fff;
+            padding: 4rem 1rem;
+            text-align: center;
+            border-radius: 1rem;
+            margin: 4rem 0;
+        }
+
+        .bonus-section h3 {
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .bonus-section p {
+            font-size: 1.1rem;
+        }
+
+        .contact.section {
+            background-color: #7A2B80;
+        }
+
+        .contact .php-email-form input[type=text],
+        .contact .php-email-form input[type=email],
+        .contact .php-email-form textarea {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            color: #000;
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            color: #000 !important;
+        }
+
+        .disclaimer-fab-text {
+            background-color: var(--secondary-color);
+            position: fixed;
+            bottom: 70px;
+            right: 10px;
+            padding: 10px 16px;
+            border-radius: 50px;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+            z-index: 1050;
+            white-space: nowrap;
+        }
+
+        .unbreakable-ticker {
+            position: fixed;
+            top: 110px;
+            z-index: 9;
+            background: linear-gradient(90deg, #000, #838282);
+            color: #fff;
+            border: none;
+            width: 100%;
+            left: 0;
+            right: 0;
+        }
+
+        .scrolled .unbreakable-ticker {
+            top: 90px;
+        }
+
+        .unbreakable-ticker .ticker-track {
+            display: inline-block;
+            white-space: nowrap;
+            animation: ticker-scroll 18s linear infinite;
+        }
+
+        @keyframes ticker-scroll {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        /* Mobile optimization */
+        @media (max-width: 576px) {
+            .disclaimer-fab-text {
+                padding: 12px;
+            }
+
+            .disclaimer-label {
+                display: none;
+            }
+        }
+
+        /* Responsive adjustments */
+        @media(max-width:768px) {
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+
+            .hero-features {
+                flex-direction: column;
+            }
+
+            .plan-card {
+                margin-bottom: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header" class="header d-flex align-items-center fixed-top" style="background-color: #111827;">
+        <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+            <a href="index.html" class="logo d-flex align-items-center me-auto">
+                <img src="assets/img/Kinetic AA Logo - Horizontal - White Text RGB.png" alt="Kinetic Logo" width="250"
+                    style="max-height: 100%;">
+            </a>
+
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="index.html">Home<br></a></li>
+                    <li><a href="internet.html">Internet</a></li>
+                    <li><a href="frontier.html">Frontier</a></li>
+                    <li><a href="/optimum.html">Optimum</a></li>
+                    <li><a href="#" class="active">Kinetic</a></li>
+                    <!-- <li><a href="services.html">Services</a></li> -->
+                    <!-- <li><a href="pricing.html">Pricing</a></li>
+            <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                <li><a href="#">Dropdown 1</a></li>
+                <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i
+                        class="bi bi-chevron-down toggle-dropdown"></i></a>
+                    <ul>
+                    <li><a href="#">Deep Dropdown 1</a></li>
+                    <li><a href="#">Deep Dropdown 2</a></li>
+                    <li><a href="#">Deep Dropdown 3</a></li>
+                    <li><a href="#">Deep Dropdown 4</a></li>
+                    <li><a href="#">Deep Dropdown 5</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Dropdown 2</a></li>
+                <li><a href="#">Dropdown 3</a></li>
+                <li><a href="#">Dropdown 4</a></li>
+                </ul>
+            </li> -->
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+
+            <a class="btn-getstarted" href="tel: +17204966912">Give a Call</a>
+        </div>
+    </header>
+    <div class=" mt-4 ">
+        <div class="alert alert-info d-flex align-items-center overflow-hidden p-3 unbreakable-ticker" role="alert">
+            <div class="ticker-track">
+                <span class="fw-semibold me-4">
+                    Exclusive Bonus Offer
+                </span>
+                <span class="opacity-75">
+                    Sign up for a plan today and receive up to a $200 Kinetic Reward Prepaid Mastercard®. Value
+                    varies on plan
+                    selected; not all plans qualify.
+                </span>
+            </div>
+        </div>
+    </div>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <h1>Everyday Low Pricing, 100% Fiber Internet</h1>
+        <p>Fast, reliable internet for your home with wall-to-wall coverage and 99.9% network reliability.</p>
+        <a class="btn btn-primary" href="#plans-section">Check Plans</a>
+
+        <div class="hero-features mt-5">
+            <div class="hero-feature">
+                <i class="bi bi-speedometer2"></i>
+                <p>Everyday low pricing with no surprise overages</p>
+            </div>
+            <div class="hero-feature">
+                <i class="bi bi-wifi"></i>
+                <p>100% fiber internet to your home</p>
+            </div>
+            <div class="hero-feature">
+                <i class="bi bi-upload"></i>
+                <p>More than 25x faster upload speeds compared to cable</p>
+            </div>
+            <div class="hero-feature">
+                <i class="bi bi-house-door"></i>
+                <p>Free Whole Home Wi-Fi setup, wall-to-wall coverage</p>
+            </div>
+            <div class="hero-feature">
+                <i class="bi bi-check-circle"></i>
+                <p>99.9% network reliability</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plans Section -->
+    <section id="plans-section" class="plans-section">
+        <div class="container">
+            <h2>Choose Your Plan</h2>
+            <div class="row g-4 justify-content-center">
+                <!-- 2 Gig Plan -->
+                <div class="col-md-4">
+                    <div class="plan-card">
+                        <div class="plan-title">2 Gig - BEST VALUE</div>
+                        <div class="plan-price">$69.99/mo</div>
+                        <p>Ultra-fast speeds for large smart homes.</p>
+                        <ul class="plan-features text-start">
+                            <li>2 year price guarantee</li>
+                            <li>Plenty of power for 30+ devices</li>
+                            <li>Bandwidth hungry activities like uploading/downloading large files</li>
+                            <li>4k/8k video streaming on multiple devices</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 1 Gig Plan -->
+                <div class="col-md-4">
+                    <div class="plan-card">
+                        <div class="plan-title">1 Gig</div>
+                        <div class="plan-price">$49.99/mo</div>
+                        <p>Boosted speed and capacity for working from home and gaming.</p>
+                        <ul class="plan-features text-start">
+                            <li>1 year price guarantee</li>
+                            <li>Boosted speed and capacity for working from home</li>
+                            <li>Competitive gaming</li>
+                            <li>4k video streaming</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 300 Mbps Plan -->
+                <div class="col-md-4">
+                    <div class="plan-card">
+                        <div class="plan-title">300 Mbps</div>
+                        <div class="plan-price">$39.99/mo</div>
+                        <p>Good for most day-to-day internet uses including streaming video.</p>
+                        <ul class="plan-features text-start">
+                            <li>1 year price guarantee</li>
+                            <li>Ideal for everyday browsing</li>
+                            <li>Video conferencing</li>
+                            <li>HD streaming & gaming</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact" class="contact section">
+        <div class="container section-title" data-aos="fade-up">
+            <span>Contact Us</span>
+            <h2>Get in Touch</h2>
+            <p>Have questions? Fill out the form and we’ll get back to you shortly.</p>
+        </div>
+
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+
+                    <!-- Contact Form -->
+                    <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up"
+                        data-aos-delay="200">
+                        <div class="row gy-4">
+
+                            <div class="col-md-6">
+                                <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                            </div>
+
+                            <div class="col-md-6 ">
+                                <input type="email" class="form-control" name="email" placeholder="Your Email"
+                                    required="">
+                            </div>
+
+                            <div class="col-md-12">
+                                <input type="text" class="form-control" name="subject" placeholder="Subject"
+                                    required="">
+                            </div>
+
+                            <div class="col-md-12">
+                                <textarea class="form-control" name="message" rows="6" placeholder="Message"
+                                    required=""></textarea>
+                            </div>
+
+                            <div class="col-md-12 text-center">
+                                <div class="loading">Loading</div>
+                                <div class="error-message"></div>
+                                <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                                <button type="submit">Send Message</button>
+                            </div>
+
+                        </div>
+                    </form><!-- End Contact Form -->
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer" class="footer dark-background">
+
+        <div class="container footer-top">
+            <div class="row gy-4">
+
+                <div class="col-lg-5 col-md-12 footer-about">
+                    <a href="index.html" class="logo d-flex align-items-center">
+                        <span class="sitename">Speedy Internet</span>
+                    </a>
+                    <p>Providing seamless logistics and <strong>Speedy Internet</strong> to ensure your
+                        business
+                        operations stay smooth, efficient, and reliable across all channels.</p>
+                    <div class="social-links d-flex mt-4">
+                        <!-- <a href="#"><i class="bi bi-twitter"></i></a> -->
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-6 footer-links">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="/optimum.html">Optimum</a></li>
+                        <li><a href="frontier.html">Frontier</a></li>
+                        <li><a href="#">Kinetic</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+                    <h4>Contact Us</h4>
+                    <p>Denver </p>
+                    <p>Colorado</p>
+                    <p>United States</p>
+                    <p class="mt-4"><strong>Phone:</strong> <span><a href="tel: +17204966912">+17204966912</a></span>
+                    </p>
+                    <p><strong>Email:</strong> <span><a
+                                href="mailto: info@speedyinternet.net">info@speedyinternet.net</a></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container copyright text-center mt-4">
+            <p>© <span>Copyright</span> <strong class="px-1 sitename">speedyinternet</strong> <span>All Rights
+                    Reserved</span></p>
+        </div>
+    </footer>
+
+    <!-- Disclaimer Button -->
+    <button type="button" class="btn btn-secondary disclaimer-fab-text" data-bs-toggle="modal"
+        data-bs-target="#disclaimerModal" aria-label="View Disclaimer">
+        <i class="bi bi-info-circle me-2"></i>
+        <span class="disclaimer-label">
+            Disclaimer & Legal Terms
+        </span>
+    </button>
+
+    <div class="modal fade" id="disclaimerModal" tabindex="-1" aria-labelledby="disclaimerModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable modal-dialog-centered">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h5 class="modal-title" id="disclaimerModalLabel">
+                        Offer Disclaimers & Legal Terms
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="modal-body disclaimer-modal-text">
+
+                    <!-- Original Disclaimer -->
+                    <p><strong>DISCLAIMER:</strong></p>
+
+                    <p>
+                        Offer for new residential customers. Advertised price reflects $5 discount for enrolling in Auto
+                        Pay & Paperless Billing, must maintain both to keep discount. Former Optimum seasonal customers
+                        or customers previously not in good standing not eligible for promo. Acct with unpaid bill after
+                        due date is not in good standing. Offer is not transferrable, may not be combined with other
+                        offers, is limited to advertised level of service, and is not available in all areas. Other
+                        terms, restrictions & conditions apply. Internet and mobile subscriptions continue and renew
+                        automatically each month until canceled. Cancel any time at 877-794-2724. Cancellation effective
+                        at end of then-current billing period except in WV. Reliability claim excludes Internet outages
+                        caused by external events & scheduled maintenance.
+                    </p>
+
+                    <p><strong>INTERNET EQUIP, TAXES & FEES:</strong> For online orders, standard rates for professional
+                        installation may apply where free self-install is available. 1 free Gateway included. Limit 1
+                        per household. 1 free WiFi extender available if recommended by your Optimum technician. WiFi
+                        extender(s) may be needed in order to connect wirelessly throughout Subscriber’s residence. For
+                        customers located in TX a State Cost Recovery fee applies for Internet service. For other
+                        services and supplies (add’l equip., install, paper bill, device protection, misc. services,
+                        etc.) taxes may apply. Min system req’s & equip configs apply.
+                    </p>
+
+                    <p><strong>INTERNET + UNLIMITED MOBILE:</strong> Offer for new residential customers. Requires
+                        separate signup for and maintenance of Internet and mobile services. Mobile signup must be
+                        completed within 30 days of Internet, otherwise Internet billed at current promotional rate,
+                        which is subject to change at any time. Advertised pricing achieved via credits on Internet bill
+                        and reflects $5 discount for enrolling in and maintaining Auto Pay & Paperless Billing on
+                        Internet account. Pricing increases by $25/mo as of month 13 and is then subject to further
+                        change. Mobile service billed separately. Former Optimum/Suddenlink seasonal customers or
+                        customers previously not in good standing not eligible for promo. Acct with unpaid bill after
+                        due date is not in good standing. Offer is not transferrable, may not be combined with other
+                        offers, is limited to advertised level of service, and is not available in all areas. Other
+                        terms, restrictions & conditions apply. Internet and mobile subscriptions continue and renew
+                        automatically each month until canceled. Cancel any time at 877-794-2724. Cancellation effective
+                        at end of then-current billing period except in WV. Savings claims based on price of Internet
+                        when bundled with Mobile vs price of Internet alone.
+                    </p>
+
+                    <p><strong>60-DAY MONEY-BACK GUARANTEE:</strong> Only for the Internet service monthly fee, Mobile
+                        monthly service, and Mobile activation fees. Optimum must be contacted within first 60 days of
+                        service to receive full refund. Customers without remaining account balance will receive refund
+                        to original payment method. Customers with remaining account balances will receive a bill
+                        credit. Mobile devices purchases and financing not refundable. 21-day Mobile device return
+                        policy applies (subject to $50 restocking fee).
+                    </p>
+
+                    <p><strong>OPTIMUM PREPAID MASTERCARD:</strong> Offer is not available to individuals who have
+                        previously participated in a Prepaid/Gift Card or Snappy Gift promotion within the past 12
+                        months. Must maintain promotion and remain in good standing with no past due or returned
+                        payments throughout first 90 days after account activation in order to receive Prepaid
+                        Mastercard. Card will be mailed 4-6 weeks after 90-day period or customer may elect to receive
+                        virtually. Limit 1 per customer. Prepaid Mastercard cannot be used to pay Optimum monthly bill.
+                        Card/Virtual card is issued by Pathward®, N.A., Member FDIC, pursuant to license by Mastercard
+                        International Incorporated. Mastercard and the circles design are registered trademarks of
+                        Mastercard International Incorporated. No cash access or recurring payments. Card can be used
+                        where Debit Mastercard is accepted. Virtual card can be used where Debit Mastercard is accepted
+                        online, for phone/mail orders or in stores that accept mobile wallet. Card/Virtual card valid
+                        for up to 12 months; unused funds will forfeit after the valid thru date. Terms and conditions
+                        apply.
+                    </p>
+
+                    <p class="mb-0">
+                        All trademarks and service marks are the property of their respective owner. © 2025 CSC
+                        Holdings, LLC.
+                    </p>
+
+                    <!-- ===== Kinetic Disclaimer ===== -->
+                    <hr class="my-4">
+                    <p><strong>KINETIC FIBER INTERNET DISCLAIMER:</strong></p>
+
+                    <p>
+                        Kinetic Gig Speed Fiber has up to 1 Gig upload speed, which is more than 25x faster than the
+                        best advertised 1 Gig cable internet speed (30-35 Mbps as of June 2024). Kinetic: Offer subject
+                        to change at any time. Subject to availability, credit restrictions, Kinetic Online Terms and
+                        Conditions (<a href="https://www.windstream.com/terms"
+                            target="_blank">www.windstream.com/terms</a>), and Windstream Acceptable Use Policy (<a
+                            href="https://www.windstream.com/about/legal/acceptable-use-policy"
+                            target="_blank">www.windstream.com/about/legal/acceptable-use-policy</a>).
+                    </p>
+
+                    <p>
+                        $39.99 Fiber Internet Eligibility: To be eligible, must be a new Kinetic Broadband Internet
+                        customer (no service in past 30 days). Price varies by availability; location may qualify for
+                        $49.99. Advertised rate is based on 300Mbps service (includes $5/mo AutoPay bill credit).
+                    </p>
+
+                    <p>
+                        Price Guarantee: Everyday Price is for a Guarantee Period of 1 yr for Fiber 300Mbps or 1 Gig
+                        Fiber, 2 yrs for Fiber 2 Gig service, & 3 yrs for Fiber MAX 2 Gig service. After the Guarantee
+                        Period, or relocation/change/suspension of service, rates are subject to change. Printed bills
+                        incur $2/mo charge (excluding select states). AutoPay Credit requires separate enrollment.
+                        Register via Go Kinetic Portal or call 877-807-9463. $5 AutoPay credit may take up to 2 billing
+                        cycles. Taxes, fees, surcharges, equipment fees may apply.
+                    </p>
+
+                    <p>
+                        Kinetic Internet: Speeds, availability, and service reliability may vary due to network
+                        conditions, terrain, number of users, devices, Wi-Fi use, etc. Speeds ≥25 Mbps are provisioned
+                        in a range, may be lower than maximum. Equipment fees may apply; modem must be returned ($100
+                        fee if not). Whole Home Wi-Fi setup utilizes Kinetic Gateway, extenders, and Wi-Fi devices;
+                        standard rate $10.99/mo. Additional extenders $5-10/mo. Professional installation may apply.
+                    </p>
+
+                    <p>
+                        Reward Card Offer: Up to $200 depending on plan. Open to new Kinetic Broadband Internet
+                        customers. Subject to service activation & good standing for 90 days. Max one card per
+                        household. Govt accounts not eligible. Kinetic Reward Prepaid Mastercard: Redemption email sent
+                        after eligibility confirmation; choose electronic or physical card ($3 shipping). Use where
+                        Mastercard is accepted. Not a gift card; may expire.
+                    </p>
+
+                    <p>
+                        99.9% Service Availability: Measured from March 2023 to Jan 2025; excludes planned maintenance,
+                        emergencies, and uncontrollable events. ©2025 Uniti Group, Inc. All rights reserved.
+                    </p>
+
+                </div>
+
+                <!-- Modal Footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                        Close
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+    <script>
+        document.getElementById("agreeBtn").addEventListener("click", function () {
+            // Hide the entire disclaimer div
+            document.getElementById("disclaimerDiv").style.display = "none";
+        });
+    </script>
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -16,20 +16,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mail = new PHPMailer(true);
 
     try {
-        // $mail->isSMTP();
-        // $mail->Host       = 'speedyinternet.net'; 
-        // $mail->SMTPAuth   = true; 
-        // $mail->Username   = 'speedyinternet06@gmail.com'; 
-        // $mail->Password   = 'AllahGee@0786'; // your email password
-        // $mail->SMTPSecure = 'tls'; 
-        // $mail->Port       = 587;
-
     // Server settings
     $mail->isSMTP();
     $mail->Host       = 'speedyinternet.net';          // Outgoing server
     $mail->SMTPAuth   = true;
     $mail->Username   = 'info@speedyinternet.net';     // Full cPanel email account
-    $mail->Password   = 'Pakistan123456!';             // Mailbox password
+    $mail->Password   = 'Pakistan123456!';             
     $mail->SMTPSecure = 'ssl';                        // SSL encryption
     $mail->Port       = 465;                          // SSL port
 
